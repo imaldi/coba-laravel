@@ -21,20 +21,16 @@ class Post
 
     public static function all()
     {
-        return self::$blog_posts;
+        // self utk property static
+        return collect(self::$blog_posts);
     }
 
     public static function find($slug)
     {
-        $posts = self::$blog_posts;
+        // static utk method static
+        $posts = static::all();
 
-        $post = [];
-        foreach ($posts as $p) {
-            if ($p['slug'] === $slug) {
-                $post = $p;
-            }
-        }
-
-        return $post;
+        // jauh lebih simple jika dijadikan collection
+        return $posts->firstWhere('slug', $slug);
     }
 }
