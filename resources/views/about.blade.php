@@ -9,8 +9,8 @@
 </head>
 <body>
     <h1>Halaman About</h1>
-    <h3>Aldi Irsan Majid</h3>
-    <p>aldiirsanmajid@gmail.com</p>
-    <img src="img/bully_maguire.jpg" alt="Bully Maguire" width="200">
+    <h3><?php echo $name; ?></h3>
+    <p><?= $email; ?></p>
+    <img src="img/<?= $img; ?>" alt="<?= $name; ?>" width="200">
 </body>
 </html>
