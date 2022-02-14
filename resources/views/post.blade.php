@@ -10,5 +10,5 @@
         </h5>
         {!! $post->body !!}
     </article>
-    <a href="/posts">Back to Posts</a>
+    <a href="/posts" class="d-block mt-3">Back to Posts</a>
 @endsection
